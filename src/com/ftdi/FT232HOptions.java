@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2011 Peter Kocsis <p. kocsis. 2. 7182 at gmail.com>.
+ * Copyright 2017 TBeckett
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,33 +24,47 @@
 package com.ftdi;
 
 /**
- * Chip type
+ * FT232HOptions
  *
- * @author Peter Kocsis <p. kocsis. 2. 7182 at gmail.com>
+ * @author TBeckett
  */
-public enum DeviceType
+public enum FT232HOptions
 {
+    FT232H_OPTION_TRISTATE(0x00),
+    FT232H_OPTION_TXLED(0x01),
+    FT232H_OPTION_RXLED(0x02),
+    FT232H_OPTION_TXRXLED(0x03),
+    FT232H_OPTION_PWREN(0x04),
+    FT232H_OPTION_SLEEP(0x05),
+    FT232H_OPTION_DRIVE_0(0x06),
+    FT232H_OPTION_DRIVE_1(0x07),
+    FT232H_OPTION_IOMODE(0x08),
+    FT232H_OPTION_TXDEN(0x09),
+    FT232H_OPTION_CLK30(0x0A),
+    FT232H_OPTION_CLK15(0x0B),
+    FT232H_OPTION_CLK7_5(0x0C);
 
-    DEVICE_232BM,
-    DEVICE_232AM,
-    DEVICE_100AX,
-    DEVICE_UNKNOWN,
-    DEVICE_2232C,
-    DEVICE_232R,
-    DEVICE_2232H,
-    DEVICE_4232H,
-    DEVICE_232H,
-    DEVICE_X_SERIES,
-    DEVICE_4222H_0,
-    DEVICE_4222H_1_2,
-    DEVICE_4222H_3,
-    DEVICE_4222_PROG,
-    DEVICE_900,
-    DEVICE_930,
-    DEVICE_UMFTPD3A;
+    private final int constant;
 
-    public int constant()
+    private FT232HOptions(int constant)
     {
-        return this.ordinal();
+        this.constant = constant;
+    }
+
+    int constant()
+    {
+        return this.constant;
+    }
+
+    static FT232HOptions parse(int val)
+    {
+        for (FT232HOptions curr : FT232HOptions.values())
+        {
+            if (curr.constant() == val)
+            {
+                return curr;
+            }
+        }
+        return null;
     }
 }

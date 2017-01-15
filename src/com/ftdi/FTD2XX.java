@@ -42,7 +42,7 @@ import java.util.StringTokenizer;
  *
  * @author Peter Kocsis <p. kocsis. 2. 7182 at gmail.com>
  */
-interface FTD2XX extends Library {
+public interface FTD2XX extends Library {
 
     static class Loader {
 

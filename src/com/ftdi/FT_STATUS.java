@@ -25,9 +25,11 @@ package com.ftdi;
 
 /**
  * FT_STATUS (DWORD)
+ *
  * @author Peter Kocsis <p. kocsis. 2. 7182 at gmail.com>
  */
-enum FT_STATUS {
+enum FT_STATUS
+{
 
     OK,
     INVALID_HANDLE,
@@ -47,9 +49,11 @@ enum FT_STATUS {
     EEPROM_NOT_PROGRAMMED,
     INVALID_ARGS,
     NOT_SUPPORTED,
-    OTHER_ERROR;
-    
-    int constant(){
+    OTHER_ERROR,
+    DEVICE_LIST_NOT_READY;
+
+    int constant()
+    {
         return this.ordinal();
     }
 }

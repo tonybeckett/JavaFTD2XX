@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2011 Peter Kocsis <p. kocsis. 2. 7182 at gmail.com>.
+ * Copyright 2017 TBeckett
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,33 +24,56 @@
 package com.ftdi;
 
 /**
- * Chip type
+ * FTXOptions
  *
- * @author Peter Kocsis <p. kocsis. 2. 7182 at gmail.com>
+ * @author TBeckett
  */
-public enum DeviceType
+public enum FTXOptions
 {
+    FTX_OPTION_TRISTATE(0x00),
+    FTX_OPTION_TXLED(0x01),
+    FTX_OPTION_RXLED(0x02),
+    FTX_OPTION_TXRXLED(0x03),
+    FTX_OPTION_PWREN(0x04),
+    FTX_OPTION_SLEEP(0x05),
+    FTX_OPTION_DRIVE_0(0x06),
+    FTX_OPTION_DRIVE_1(0x07),
+    FTX_OPTION_IOMODE(0x08),
+    FTX_OPTION_TXDEN(0x09),
+    FTX_OPTION_CLK24(0x0A),
+    FTX_OPTION_CLK12(0x0B),
+    FTX_OPTION_CLK6(0x0C),
+    FTX_OPTION_BCD_CH(0x0D),
+    FTX_OPTION_BCD_CH_N(0x0E),
+    FTX_OPTION_I2C_TXE(0x0F),
+    FTX_OPTION_I2C_RXF(0x10),
+    FTX_OPTION_VBUS_SENSE(0x11),
+    FTX_OPTION_BB_WR(0x12),
+    FTX_OPTION_BB_RD(0x13),
+    FTX_OPTION_TIMESTAMP(0x14),
+    FTX_OPTION_KEEPAWAKE(0x15);
 
-    DEVICE_232BM,
-    DEVICE_232AM,
-    DEVICE_100AX,
-    DEVICE_UNKNOWN,
-    DEVICE_2232C,
-    DEVICE_232R,
-    DEVICE_2232H,
-    DEVICE_4232H,
-    DEVICE_232H,
-    DEVICE_X_SERIES,
-    DEVICE_4222H_0,
-    DEVICE_4222H_1_2,
-    DEVICE_4222H_3,
-    DEVICE_4222_PROG,
-    DEVICE_900,
-    DEVICE_930,
-    DEVICE_UMFTPD3A;
+    private final int constant;
 
-    public int constant()
+    private FTXOptions(int constant)
     {
-        return this.ordinal();
+        this.constant = constant;
+    }
+
+    int constant()
+    {
+        return this.constant;
+    }
+
+    static FTXOptions parse(int val)
+    {
+        for (FTXOptions curr : FTXOptions.values())
+        {
+            if (curr.constant() == val)
+            {
+                return curr;
+            }
+        }
+        return null;
     }
 }

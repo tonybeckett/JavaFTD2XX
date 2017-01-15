@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/EEPROMData.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/BitModes.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/DeviceStatus.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/FlowControl.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/WordLength.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/Purge.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/FT_STATUS.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/Parity.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/DeviceType.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/FTD2XX.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/FTDeviceOutputStream.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/FTDevice.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/FT232HOptions.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/FTD2XXException.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/StopBits.java</file>
+            <file>file:/E:/Users/tbeckett/Development/JavaFTD2XX/src/com/ftdi/FTDeviceInputStream.java</file>
+        </group>
+    </open-files>
 </project-private>

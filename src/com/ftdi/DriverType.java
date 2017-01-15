@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2011 Peter Kocsis <p. kocsis. 2. 7182 at gmail.com>.
+ * Copyright 2017 TBeckett
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,32 +24,18 @@
 package com.ftdi;
 
 /**
- * Chip type
+ * DriverType 
  *
- * @author Peter Kocsis <p. kocsis. 2. 7182 at gmail.com>
+ * @author TBeckett
  */
-public enum DeviceType
+public enum DriverType
 {
 
-    DEVICE_232BM,
-    DEVICE_232AM,
-    DEVICE_100AX,
-    DEVICE_UNKNOWN,
-    DEVICE_2232C,
-    DEVICE_232R,
-    DEVICE_2232H,
-    DEVICE_4232H,
-    DEVICE_232H,
-    DEVICE_X_SERIES,
-    DEVICE_4222H_0,
-    DEVICE_4222H_1_2,
-    DEVICE_4222H_3,
-    DEVICE_4222_PROG,
-    DEVICE_900,
-    DEVICE_930,
-    DEVICE_UMFTPD3A;
+    DRIVER_D2XX,
+    DRIVER_VCP,
+     ;
 
-    public int constant()
+    int constant()
     {
         return this.ordinal();
     }
